@@ -7,20 +7,12 @@
 
 	<?php
 
-	// Mejora: guardar toda la info de las variables en una sesión que será un array asociativo. 
-
 	if(isset($_POST['enviar'])){ //Sólo ejecuto cuando clicke el botón enviar
 		$idioma=$_POST['idioma']; //Cojo los valores enviados por POST
 		$perfil=$_POST['perfil'];
 		$zona_horaria=$_POST['zona_horaria']; 
 
 		session_start(); //Inicio sesión
-
-		/*$_SESSION = [ //Guardo toda la información de las variables en un array asociativo
-			"idioma"=>$idioma;
-			"perfil"=>$perfil;
-			"zona_horaria"=>$zona_horaria; 
-		]*/
 
 		$_SESSION['idioma']=$idioma; //Guardo los valores en la sesión
 		$_SESSION['perfil']=$perfil;
